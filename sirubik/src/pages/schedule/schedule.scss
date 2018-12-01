@@ -1,3 +1,11 @@
-page-home {
+page-schedule {
+    ion-header.header {
+        background: #faebec;
+    }
 
+    .scroll-content {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;  
+    }
 }

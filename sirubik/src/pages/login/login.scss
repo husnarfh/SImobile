@@ -1,0 +1,43 @@
+page-login{
+    .background{
+        background-image: url('../assets/rubik-depan-oke - Copy.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    ion-card.card {
+        position: fixed;
+        bottom: 200px;
+        box-shadow: none;
+        background-color: brown;
+        border-radius: 0px;
+    }
+
+    ion-list.list {
+        margin-top: 70px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .button {
+        padding: 20px;
+        width: 355px;
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .image {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .scroll-content {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+}
