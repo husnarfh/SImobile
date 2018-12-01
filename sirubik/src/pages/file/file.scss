@@ -1,3 +1,32 @@
-page-about {
-
+page-file {
+    .accordion-list {
+        background-image: url('../assets/imgs/help.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    .section {
+        background: #fff;
+        color: #000;
+        margin-bottom: 3px;
+    }
+    .section-active {
+        background: cornflowerblue;
+        color: #fff;
+    } 
+    .child {
+        background: #e8e7e6;
+        color: #000;
+        margin-bottom: 3px;
+    }
+    .child-item {
+        background: #f3f2f1;
+        padding: 10px;
+    }
+    .label {
+        margin: 0px;
+    }
+    .list {
+        margin-bottom: 3px;
+    }
 }

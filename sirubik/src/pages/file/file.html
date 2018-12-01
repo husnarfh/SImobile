@@ -6,6 +6,35 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="accordion-list">
+  
+  <!-- First Level -->
+  <ion-list *ngFor="let item of information; let i = index" no-lines no-padding>
+    <!-- Toggle Button -->
+    <ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <ion-icon item-start name="ios-arrow-dropright" *ngIf="!item.open"></ion-icon>
+      <ion-icon item-start name="ios-arrow-dropdown" *ngIf="item.open"></ion-icon>
+      {{ item.name }}
+    </ion-item>
+
+    <ion-list *ngIf="item.children && item.open" no-lines>
+      <!-- Second Level -->
+      <ion-list *ngFor="let child of item.children; let j = index" no-padding text-wrap>
+        <!-- Toggle Button -->
+        <ion-item (click)="toggleItem(i, j)" *ngIf="child.children" class="child" detail-none>
+          <ion-icon item-start name="ios-help" *ngIf="!child.open"></ion-icon>
+          <ion-icon item-start name="ios-close" *ngIf="child.open"></ion-icon>
+          {{ child.name }}
+        </ion-item>
+
+        <!-- Direct Add Button as Fallback -->
+        <ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
+          <h6>{{ child.name }}</h6>
+          <p>{{ child.information }}</p>
+        </ion-item>
+       
+      </ion-list>
+    </ion-list>
+  </ion-list>
 
 </ion-content>

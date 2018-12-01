@@ -1,0 +1,88 @@
+{
+    "items": [
+        {
+            "name": "Kelas 1",
+            "children": [
+                {
+                    "name": "Bahasa Inggris"                    
+                },
+                {
+                    "name": "IPA"                    
+                },
+                {
+                    "name": "Matematika"
+                }
+            ]
+        },
+        {
+            "name": "Kelas 2",
+            "children": [
+                {
+                    "name": "Bahasa Inggris"                    
+                },
+                {
+                    "name": "IPA"                    
+                },
+                {
+                    "name": "Matematika"
+                }
+            ]
+        },
+        {
+            "name": "Kelas 3",
+            "children": [
+                {
+                    "name": "Bahasa Inggris"                    
+                },
+                {
+                    "name": "IPA"                    
+                },
+                {
+                    "name": "Matematika"
+                }
+            ]
+        },
+        {
+            "name": "Kelas 4",
+            "children": [
+                {
+                    "name": "Bahasa Inggris"                    
+                },
+                {
+                    "name": "IPA"                    
+                },
+                {
+                    "name": "Matematika"
+                }
+            ]
+        },
+        {
+            "name": "Kelas 5",
+            "children": [
+                {
+                    "name": "Bahasa Inggris"                    
+                },
+                {
+                    "name": "IPA"                    
+                },
+                {
+                    "name": "Matematika"
+                }
+            ]
+        },
+        {
+            "name": "Kelas 6",
+            "children": [
+                {
+                    "name": "Bahasa Inggris"                    
+                },
+                {
+                    "name": "IPA"                    
+                },
+                {
+                    "name": "Matematika"
+                }
+            ]
+        } 
+    ]       
+}

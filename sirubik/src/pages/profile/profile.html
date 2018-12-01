@@ -1,24 +1,48 @@
 <ion-header>
-<ion-navbar>
-    <ion-title>RUBIK</ion-title>
-</ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            RUBIK
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="ios-create-outline"></ion-icon>
+            </button>    
 
+            <button ion-button icon-only>
+                <ion-icon name="ios-log-out-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
+    
     <ion-card>
-        <img src="imgs/logo.png"/>
-        <ion-card-content>
-          <ion-card-title text-center>
-            Namaku siapa
-            </ion-card-title>
-          <p text-center>
-           08888888888
-          </p>
-        </ion-card-content>
-    </ion-card>
+        
+            <div class="clsAutoFit">
+                    <img class="clsImg" src="assets/imgs/logo.png"/>
+                </div>
 
-<button ion-button block (click)="signOut()">Log Out</button>
+        <ion-card-title text-center>
+            Ahmad Maulvi
+        </ion-card-title>
+        
+        <ion-list inset>
+            <ion-item>
+                <h2>Email</h2>
+                <h3>maulvialfansuri@gmail.com</h3>
+            </ion-item>
+            <ion-item>
+                <h2>Telepon</h2>
+                <h3>08123456789</h3>
+            </ion-item>
+            <ion-item>
+                <h2>ID LINE</h2>
+                <h3>alfaakatsuki</h3>  
+            </ion-item>
+        </ion-list>
+           
+    </ion-card>
 
 </ion-content>
     
