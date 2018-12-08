@@ -14,6 +14,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { ChangePassPage } from '../pages/change-pass/change-pass';
 import { UploadFilePage } from '../pages/upload-file/upload-file';
+import { ChatPage } from '../pages/chat/chat';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +31,8 @@ import { DataProvider } from '../providers/data/data';
     LoginPage,
     EditProfilePage,
     ChangePassPage,
-    UploadFilePage
+    UploadFilePage,
+    ChatPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { DataProvider } from '../providers/data/data';
     LoginPage,
     EditProfilePage,
     ChangePassPage,
-    UploadFilePage
+    UploadFilePage,
+    ChatPage
   ],
   providers: [
     StatusBar,
