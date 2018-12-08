@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
-import { ProfilePage } from '../profile/profile';
-import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the EditProfilePage page.
