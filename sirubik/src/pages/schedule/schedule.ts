@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class SchedulePage {
 
+  today = Date.now();
+  
   constructor(public navCtrl: NavController) {
 
   }
