@@ -1,20 +1,14 @@
 <ion-header>
-<<<<<<< HEAD
     <ion-navbar>
         <ion-title>
-            RUBIK
+            <img src="../../assets/rubik-logo.png" height="40"/>
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only>
-                <ion-icon name="ios-create-outline"></ion-icon>
+            <button ion-button icon-only (click)="edit()">
+                <ion-icon name="ios-create-outline" ></ion-icon>
             </button>    
-=======
-<ion-navbar>
-    <ion-title><img src="../../assets/rubik-logo.png" height="40"/></ion-title>
-</ion-navbar>
->>>>>>> b903d2506a120220fc676bc5061438907fcfa986
 
-            <button ion-button icon-only>
+            <button ion-button icon-only (click)="signOut()">
                 <ion-icon name="ios-log-out-outline"></ion-icon>
             </button>
         </ion-buttons>
@@ -47,8 +41,11 @@
                 <h3>alfaakatsuki</h3>  
             </ion-item>
         </ion-list>
-           
+        <div style="text-align:right">
+        <button ion-button clear >Change Password</button>
+    </div> 
     </ion-card>
+    
 
 </ion-content>
     

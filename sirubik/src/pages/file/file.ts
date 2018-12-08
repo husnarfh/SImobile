@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, App } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { UploadFilePage } from '../upload-file/upload-file';
 
 @Component({
   selector: 'page-file',
@@ -11,7 +12,10 @@ import 'rxjs/add/operator/map';
 export class FilePage {
   information: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public app: App,
+    private http: Http) {
     let localData = this.http.get('assets/information.json').map(res => res.json().items);
     localData.subscribe(data => {
       this.information = data;
@@ -28,6 +32,10 @@ export class FilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FilePage');
+  }
+
+  addfile() {
+    this.app.getRootNav().push(UploadFilePage);
   }
 
 }

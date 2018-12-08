@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      RUBIK
+      <img src="../../assets/rubik-logo.png" height="40"/>
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -36,5 +36,7 @@
       </ion-list>
     </ion-list>
   </ion-list>
-
+  <ion-fab bottom right>
+      <button ion-fab (click)="addfile()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
 </ion-content>

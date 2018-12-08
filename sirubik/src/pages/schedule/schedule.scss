@@ -4,8 +4,6 @@ page-schedule {
     }
 
     .scroll-content {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;  
+        overflow-y: auto;  
     }
 }

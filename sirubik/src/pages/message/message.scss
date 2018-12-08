@@ -1,9 +1,5 @@
-page-contact {
-  
+page-message {
     .scroll-content {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+        overflow-y: auto;  
     }
 }

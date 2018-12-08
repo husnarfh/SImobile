@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { EditProfilePage } from '../edit-profile/edit-profile';
 
 @Component({
   selector: 'page-profile',
@@ -8,11 +9,16 @@ import { LoginPage } from '../login/login';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public app: App) {
 
   }
 
 signOut(){
-    this.navCtrl.push(LoginPage);
-  } 
+  this.app.getRootNav().setRoot(LoginPage);
+  }
+
+edit() {
+  this.app.getRootNav().push(EditProfilePage);
+}
+
 }
