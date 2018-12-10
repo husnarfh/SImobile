@@ -17,6 +17,6 @@ export class TabsPage {
   tab4Root = ProfilePage;
 
   constructor() {
-
+    console.log(localStorage.getItem('userdata'));
   }
 }

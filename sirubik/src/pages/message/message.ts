@@ -13,6 +13,10 @@ export class MessagePage {
   }
 
 openChat(){
+  var tok = localStorage.getItem('token');
+  
+  console.log(tok);
+
   this.navCtrl.push(ChatPage);
 }
 

@@ -39,18 +39,19 @@ loader(){
     }
 
 login(){
-      var link = 'http://localhost/api/login';
+      var link = 'http://localhost:8000/api/login';
       var newLogin = JSON.stringify({email: this.data.email, password: this.data.password});
-       console.log(newLogin);
+      console.log(newLogin);
       this.http.post(link, newLogin).subscribe(data => {
         var response = data.json();
             // this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
         if(response.status == "200"){
           console.log(response.data);
          //this.data.login(response.data, "user");
-          this.loader();
+        localStorage.setItem('token', response.data['token']);
+        this.loader();
         this.app.getRootNav().setRoot(TabsPage);
-          // this.navCtrl.setRoot(ProfilPage);
+          // this.navCtrl.setRoot (ProfilPage);
         } else {
           // If account not found
           var toast = this.toastCtrl.create({
