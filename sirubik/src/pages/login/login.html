@@ -8,16 +8,16 @@
 
             <ion-item>
                   <ion-label stacked>Email</ion-label>
-                  <ion-input [(ngModel)]="login.email" name="email" type="text" #email="ngModel"></ion-input>
+                  <ion-input [(ngModel)]="data.email" name="email" type="text"></ion-input>
                 </ion-item>
               
                 <ion-item>
                   <ion-label stacked>Password</ion-label>
-                  	<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel"></ion-input>
+                  	<ion-input [(ngModel)]="data.password" name="password" type="password"></ion-input>
                 </ion-item>
               
               </ion-list>
-          <button ion-button block (click)="signIn()">Log In</button>
+          <button ion-button block (click)="login()">Log In</button>
        
         </ion-card-content>
 </ion-content>
