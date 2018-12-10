@@ -13,10 +13,9 @@ export class MessagePage {
   }
 
 openChat(){
-  var tok = localStorage.getItem('token');
-  
+  var tok = localStorage.getItem('profile');
   console.log(tok);
-
+  
   this.navCtrl.push(ChatPage);
 }
 

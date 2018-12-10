@@ -2,7 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, AlertController, Events, ToastController, App, LoadingController, MenuController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
+import { RequestOptions } from '@angular/http';
 import { DataProvider } from '../../providers/data/data';
 import { NgForm } from '@angular/forms';
 
@@ -12,7 +13,6 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginPage {
   data:any = {}; 
-
     constructor(
       public app: App,
       public navCtrl: NavController,
@@ -26,7 +26,9 @@ export class LoginPage {
         this.data.email = "";
         this.data.password = "";
         this.data.response = "";
+        this.data.token = "";
         this.http = http;
+
     }
 
 
@@ -36,7 +38,28 @@ loader(){
         duration: 1000
       });
       loader.present();
+      this.profile();
+
     }
+
+profile(){
+  var link = 'http://localhost:8000/api/profilesendiri';
+  var newLogin = JSON.stringify({ email: this.data.email, password: this.data.password });
+  
+  // cara gunain tokenizer
+  let headers = new Headers();
+  headers.append('Authorization', 'Bearer ' + this.data.token);
+  let options = new RequestOptions({ headers: headers });  
+  this.http.get(link, options).subscribe(data => {
+
+    var response = data.json();
+    localStorage.setItem('profile',  JSON.stringify(response['hasil'][0]));
+    
+  }, error=> console.log("profile can't attach")
+  );
+  
+
+}
 
 login(){
       var link = 'http://localhost:8000/api/login';
@@ -48,7 +71,9 @@ login(){
         if(response.status == "200"){
           console.log(response.data);
          //this.data.login(response.data, "user");
+        this.data.token = response.data['token'];
         localStorage.setItem('token', response.data['token']);
+          
         this.loader();
         this.app.getRootNav().setRoot(TabsPage);
           // this.navCtrl.setRoot (ProfilPage);

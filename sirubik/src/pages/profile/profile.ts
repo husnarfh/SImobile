@@ -9,9 +9,11 @@ import { ChangePassPage } from '../change-pass/change-pass';
   templateUrl: 'profile.html'
 })
 export class ProfilePage {
+  profile: any;
 
   constructor(public navCtrl: NavController, public app: App) {
-
+    this.profile = JSON.parse(localStorage.getItem('profile'));
+    
   }
 
 signOut(){
