@@ -8,10 +8,12 @@ import { NavController } from 'ionic-angular';
 export class SchedulePage {
 
   today = Date.now();
+  profile: any;
 
   constructor(public navCtrl: NavController) {
-
-    console.log(localStorage.getItem('userdata'));
+  
+    this.profile = JSON.parse(localStorage.getItem('profile'));
+    
   }
 
   
