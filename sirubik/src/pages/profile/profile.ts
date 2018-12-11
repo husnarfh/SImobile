@@ -5,6 +5,7 @@ import { EditProfilePage } from '../edit-profile/edit-profile';
 import { ChangePassPage } from '../change-pass/change-pass';
 import { Http, Headers } from '@angular/http';
 import { RequestOptions } from '@angular/http';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -17,15 +18,18 @@ export class ProfilePage {
   constructor(
     public navCtrl: NavController, 
     public app: App,
-    public http: Http
+    public http: Http,
+    public domSanitizer: DomSanitizer
     ) {
     
     this.profile = JSON.parse(localStorage.getItem('profile'));
+    this.profile.image = ("data:image/jpg;base64,"+ this.profile.image);
     this.token = localStorage.getItem('token');
     this.http = http;
   }
 
 signOut(){
+  
   var link = "http://localhost:8000/api/logout";
   let headers = new Headers();
   headers.append('Authorization', 'Bearer ' + this.token);
@@ -44,6 +48,7 @@ signOut(){
 }
 
 edit() {
+  console.log(this.profile);
   this.app.getRootNav().push(EditProfilePage);
 }
 

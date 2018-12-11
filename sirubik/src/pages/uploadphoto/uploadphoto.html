@@ -12,26 +12,27 @@
 
 </ion-header>
 
+
 <ion-content padding>
+  <h2>Pilih Foto!</h2>
+  <button ion-button full (click)="takePhoto()">
+    <ion-icon name="camera"></ion-icon>&nbsp;Take Photo
+  </button>
+  <button ion-button full (click)="browsePhoto()">
+    <ion-icon name="camera"></ion-icon>&nbsp;Browse Photo
+  </button>
 
-  <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null">
-  <h3 [hidden]="lastImage !== null">Upload foto profil</h3>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let photo of photos; let id = index">
+        <ion-card class="block">
+          <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+          <img [src]="photo" *ngIf="photo" />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
-
-  <ion-footer>
-    <ion-toolbar color="primary">
-      <ion-buttons>
-        <button ion-button icon-left (click)="presentActionSheet()">
-          <ion-icon name="camera"></ion-icon>Pilih gambar
-        </button>
-        <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
-          <ion-icon name="cloud-upload"></ion-icon>Upload
-        </button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-footer>
-
 
   <!-- <ion-list inset>
     <ion-item>
