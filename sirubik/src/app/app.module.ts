@@ -15,10 +15,20 @@ import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 import { ChangePassPage } from '../pages/change-pass/change-pass';
 import { UploadFilePage } from '../pages/upload-file/upload-file';
 import { ChatPage } from '../pages/chat/chat';
+import { UploadphotoPage } from '../pages/uploadphoto/uploadphoto';
+
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataProvider } from '../providers/data/data';
+
+// baru
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
+import { Camera } from '@ionic-native/camera';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +42,8 @@ import { DataProvider } from '../providers/data/data';
     EditProfilePage,
     ChangePassPage,
     UploadFilePage,
-    ChatPage
+    ChatPage,
+    UploadphotoPage
   ],
   imports: [
     BrowserModule,
@@ -52,13 +63,19 @@ import { DataProvider } from '../providers/data/data';
     EditProfilePage,
     ChangePassPage,
     UploadFilePage,
-    ChatPage
+    ChatPage,
+    UploadphotoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataProvider
+    DataProvider,
+
+    File,
+    Transfer,
+    Camera,
+    FilePath
   ]
 })
 export class AppModule {}
