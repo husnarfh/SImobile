@@ -28,6 +28,8 @@ import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { FileChooser } from '@ionic-native/file-chooser';
 
 
 @NgModule({
@@ -75,7 +77,9 @@ import { Camera } from '@ionic-native/camera';
     File,
     Transfer,
     Camera,
-    FilePath
+    FilePath,
+    FileTransfer,
+    FileChooser
   ]
 })
 export class AppModule {}

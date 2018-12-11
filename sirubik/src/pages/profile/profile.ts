@@ -28,32 +28,43 @@ export class ProfilePage {
     this.http = http;
   }
 
-signOut(){
+  signOut(){
+
+    var link = "http://localhost:8000/api/logout";
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + this.token);
+    let options = new RequestOptions({ headers: headers });
+
+    this.http.get(link, options).subscribe(data => {}
+      ,error=> {
+        console.log("oops");
+        return;
+      }
+    );
+    console.log("Log out sukses");
+
+    this.app.getRootNav().setRoot(LoginPage);
+
+  }
+
+  edit() {
+    console.log(this.profile);
+    this.app.getRootNav().push(EditProfilePage);
+  }
+
+  change() {
+    this.app.getRootNav().push(ChangePassPage);
+  }
   
-  var link = "http://localhost:8000/api/logout";
-  let headers = new Headers();
-  headers.append('Authorization', 'Bearer ' + this.token);
-  let options = new RequestOptions({ headers: headers });
 
-  this.http.get(link, options).subscribe(data => {}
-    ,error=> {
-      console.log("oops");
-      return;
-    }
-  );
-  console.log("Log out sukses");
+  public doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+    // this.navCtrl.setRoot(this.navCtrl.getActive().component);
 
-  this.app.getRootNav().setRoot(LoginPage);
-
-}
-
-edit() {
-  console.log(this.profile);
-  this.app.getRootNav().push(EditProfilePage);
-}
-
-change() {
-  this.app.getRootNav().push(ChangePassPage);
-}
+  }
 
 }

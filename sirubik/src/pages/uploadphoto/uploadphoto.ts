@@ -162,7 +162,8 @@ export class UploadphotoPage {
      console.log(data);
      this.http.post(url, data, this.options).subscribe(data=>{
         console.log("file uploaded kayanya");
-     }
+     
+    }
       , error=>console.log("Jaringan error"));
    }
 
