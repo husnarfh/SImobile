@@ -6,6 +6,16 @@
   </ion-navbar>
 </ion-header>
 
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+</ion-content>
+
 <ion-content padding class="accordion-list">
   
   <!-- First Level -->
@@ -40,3 +50,5 @@
       <button ion-fab (click)="addfile()"><ion-icon name="add"></ion-icon></button>
     </ion-fab>
 </ion-content>
+
+

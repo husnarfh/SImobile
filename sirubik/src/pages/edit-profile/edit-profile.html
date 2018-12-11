@@ -17,15 +17,16 @@
     <ion-list inset>
         <ion-item>
             <ion-label stacked>Nama Lengkap</ion-label>
-            <ion-input></ion-input>
+            <ion-input [(ngModel)]="data.nama_lengkap" name="nama_lengkap" type="text"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label stacked>Telepon</ion-label>
-            <ion-input></ion-input>
+            <ion-input [(ngModel)]="data.no_hp" name="no_hp" type="text"></ion-input>
+
         </ion-item>
         <ion-item>
             <ion-label stacked>ID Line</ion-label>
-            <ion-input ></ion-input>
+            <ion-input [(ngModel)]="data.id_line" name="id_line" type="text"></ion-input>
         </ion-item>
       </ion-list>
 

@@ -3,6 +3,9 @@ import { NavController, App } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { EditProfilePage } from '../edit-profile/edit-profile';
 import { ChangePassPage } from '../change-pass/change-pass';
+import { Http, Headers } from '@angular/http';
+import { RequestOptions } from '@angular/http';
+
 
 @Component({
   selector: 'page-profile',
@@ -10,15 +13,35 @@ import { ChangePassPage } from '../change-pass/change-pass';
 })
 export class ProfilePage {
   profile: any;
-
-  constructor(public navCtrl: NavController, public app: App) {
-    this.profile = JSON.parse(localStorage.getItem('profile'));
+  token: any;
+  constructor(
+    public navCtrl: NavController, 
+    public app: App,
+    public http: Http
+    ) {
     
+    this.profile = JSON.parse(localStorage.getItem('profile'));
+    this.token = localStorage.getItem('token');
+    this.http = http;
   }
 
 signOut(){
+  var link = "http://localhost:8000/api/logout";
+  let headers = new Headers();
+  headers.append('Authorization', 'Bearer ' + this.token);
+  let options = new RequestOptions({ headers: headers });
+
+  this.http.get(link, options).subscribe(data => {}
+    ,error=> {
+      console.log("oops");
+      return;
+    }
+  );
+  console.log("Log out sukses");
+
   this.app.getRootNav().setRoot(LoginPage);
-  }
+
+}
 
 edit() {
   this.app.getRootNav().push(EditProfilePage);

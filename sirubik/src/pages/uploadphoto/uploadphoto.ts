@@ -140,6 +140,8 @@ export class UploadphotoPage {
   public uploadImage() {
     // Destination URL
     var url = "http://localhost:8000/api/uploadimage";
+    
+    // nyoba kodingan ga pake laravel
     var url = "http://0.0.0.0:8090/test.php";
 
     // File for Upload

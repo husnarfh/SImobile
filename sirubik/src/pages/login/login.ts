@@ -42,7 +42,7 @@ loader(){
 
     }
 
-profile(){
+public profile(){
   var link = 'http://localhost:8000/api/profilesendiri';
   var newLogin = JSON.stringify({ email: this.data.email, password: this.data.password });
   
