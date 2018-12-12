@@ -79,7 +79,7 @@ login(){
           // this.navCtrl.setRoot (ProfilPage);
         } else {
           // If account not found
-          var toast = this.toastCtrl.create({
+          let toast = this.toastCtrl.create({
             message: 'Incorrect username or password',
             duration: 3000,
             position: 'bottom'

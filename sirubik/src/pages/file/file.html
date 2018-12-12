@@ -38,7 +38,7 @@
         </ion-item>
 
         <!-- Direct Add Button as Fallback -->
-        <ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
+        <ion-item (click)="bukaMateri()" *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
           <h6>{{ child.name }}</h6>
           <p>{{ child.information }}</p>
         </ion-item>

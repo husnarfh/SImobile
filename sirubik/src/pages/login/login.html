@@ -2,23 +2,30 @@
     <div class="image">
     <img src="../../assets/rubik-logo copy.png"/>
     </div>
-  
-    <ion-card-content>
+    
+    <br><br>
+
+    <ion-card>
+      <ion-card-content>
         <ion-list>
 
             <ion-item>
                   <ion-label stacked>Email</ion-label>
                   <ion-input [(ngModel)]="data.email" name="email" type="text"></ion-input>
-                </ion-item>
+            </ion-item>
               
-                <ion-item>
+            <ion-item>
                   <ion-label stacked>Password</ion-label>
-                  	<ion-input [(ngModel)]="data.password" name="password" type="password"></ion-input>
-                </ion-item>
-              
-              </ion-list>
-          <button ion-button block (click)="login()">Log In</button>
-       
-        </ion-card-content>
+                 	<ion-input [(ngModel)]="data.password" name="password" type="password"></ion-input>
+            </ion-item>
+
+            <button ion-button block (click)="login()">Log In</button>
+
+        </ion-list>           
+      </ion-card-content>
+      
+      
+
+    </ion-card>
 </ion-content>
       

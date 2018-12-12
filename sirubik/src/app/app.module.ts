@@ -16,7 +16,7 @@ import { ChangePassPage } from '../pages/change-pass/change-pass';
 import { UploadFilePage } from '../pages/upload-file/upload-file';
 import { ChatPage } from '../pages/chat/chat';
 import { UploadphotoPage } from '../pages/uploadphoto/uploadphoto';
-
+import { MateriPage } from '../pages/materi/materi';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -45,7 +45,8 @@ import { FileChooser } from '@ionic-native/file-chooser';
     ChangePassPage,
     UploadFilePage,
     ChatPage,
-    UploadphotoPage
+    UploadphotoPage,
+    MateriPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +67,8 @@ import { FileChooser } from '@ionic-native/file-chooser';
     ChangePassPage,
     UploadFilePage,
     ChatPage,
-    UploadphotoPage
+    UploadphotoPage,
+    MateriPage
   ],
   providers: [
     StatusBar,

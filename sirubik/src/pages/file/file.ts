@@ -3,6 +3,7 @@ import { NavController, NavParams, App } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { UploadFilePage } from '../upload-file/upload-file';
+import { MateriPage } from '../materi/materi';
 
 @Component({
   selector: 'page-file',
@@ -20,6 +21,10 @@ export class FilePage {
     localData.subscribe(data => {
       this.information = data;
     });
+  }
+
+  bukaMateri() {
+    this.navCtrl.push(MateriPage);
   }
 
   doRefresh(refresher) {

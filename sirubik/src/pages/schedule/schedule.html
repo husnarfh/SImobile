@@ -16,14 +16,26 @@ x<ion-header>
   
   <h3>Halo, Kak {{ profile.nama_lengkap }}</h3>
   <p>{{today | date}}</p>
+  <br>
   <ion-card>
-
-    <ion-item>
-      <ion-icon name="calendar" item-start large></ion-icon>
-      <h2>Ini mata pelajaran</h2>
-      <p>Hari/tanggal :</p>
-      <p>Pukul :</p>
-    </ion-item>
-  
+      
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <h2>Matematika, kelas 6</h2>
+          </ion-col>
+        </ion-row>
+          <ion-row>
+              <ion-col col-9>
+                <ion-note>HARI/TANGGAL</ion-note>
+                <h3>Sabtu, 15 Des 2018</h3>
+              </ion-col>
+              <ion-col center text-center>
+                <ion-note>PUKUL</ion-note>
+                <h3>09:00</h3>
+              </ion-col>
+            </ion-row>
+      </ion-card-content>
+    
   </ion-card>
 </ion-content>

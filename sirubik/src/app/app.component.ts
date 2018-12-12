@@ -3,8 +3,8 @@ import { Platform, App } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,18 +18,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      var token = localStorage.getItem('token');
-      
-      this.debug(token);
-      if(token !== "null"){
-        app.getRootNav().setRoot(TabsPage);
-
-      }
-
-      else{
-        // this.rootPage = TabsPage;
         this.rootPage = LoginPage;
-      }
 
     });
   }
