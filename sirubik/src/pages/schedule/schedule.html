@@ -1,4 +1,4 @@
-<ion-header>
+x<ion-header>
   <ion-navbar>
     <ion-title> <img src="../../assets/rubik-logo.png" height="40"/>
   </ion-title>
@@ -6,6 +6,14 @@
 </ion-header>
 
 <ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  
   <h3>Halo, Kak {{ profile.nama_lengkap }}</h3>
   <p>{{today | date}}</p>
   <ion-card>

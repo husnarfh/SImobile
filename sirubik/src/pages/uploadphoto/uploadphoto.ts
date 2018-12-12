@@ -134,8 +134,9 @@ export class UploadphotoPage {
        imageData => {
          var pic = 'data:image/jpg;base64,' + imageData;
          if (pic.slice(22, 27) != 'iVBOR' && pic.slice(22, 27) != '/9j/4') {
-           console.log('slice:');
-           console.log(pic.slice(22, 27));
+          // bikin lag
+          //  console.log('slice:');
+          //  console.log(pic.slice(22, 27));
            let alert = this.alertCtrl.create({
              title: 'Gagal!',
              subTitle: 'Mohon masukan gambar berformat PNG atau JPG',
@@ -159,7 +160,6 @@ export class UploadphotoPage {
      console.log(imageData);
      var url = "http://localhost:8000/api/uploadimage";
      var data = JSON.stringify({image:imageData});
-     console.log(data);
      this.http.post(url, data, this.options).subscribe(data=>{
         console.log("file uploaded kayanya");
      

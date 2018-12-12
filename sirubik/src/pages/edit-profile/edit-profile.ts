@@ -60,8 +60,9 @@ export class EditProfilePage {
 
     this.data.token = localStorage.getItem('token');   
     var link = 'http://localhost:8000/api/profileedit';
-    var data = JSON.stringify({ nama_lengkap: this.data.nama_lengkap, 
-      no_hp: this.data.telepon,
+    var data = JSON.stringify({ 
+      nama_lengkap: this.data.nama_lengkap, 
+      no_hp: this.data.no_hp,
       id_line: this.data.id_line,
     });
 
@@ -84,11 +85,12 @@ export class EditProfilePage {
         let headers = new Headers();
         headers.append('Authorization', 'Bearer ' + this.data.token);
         let options = new RequestOptions({ headers: headers });
+        link = "http://localhost:8000/api/profilesendiri";        
         this.http.get(link, options).subscribe(data => {
 
           var response = data.json();
           localStorage.setItem('profile', JSON.stringify(response['hasil'][0]));
-
+          
         }, error => console.log("profile can't attach")
         );
 

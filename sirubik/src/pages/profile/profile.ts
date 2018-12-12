@@ -42,7 +42,7 @@ export class ProfilePage {
       }
     );
     console.log("Log out sukses");
-
+    localStorage.setItem("token", null);
     this.app.getRootNav().setRoot(LoginPage);
 
   }
@@ -58,12 +58,13 @@ export class ProfilePage {
   
 
   public doRefresh(refresher) {
-    console.log('Begin async operation', refresher);
+
     setTimeout(() => {
-      console.log('Async operation has ended');
-      refresher.complete();
-    }, 2000);
-    // this.navCtrl.setRoot(this.navCtrl.getActive().component);
+      // console.log('Async operation has ended');
+      this.navCtrl.setRoot(this.navCtrl.getActive().component).then(refresher.complete());
+
+    }, 1000);
+
 
   }
 
