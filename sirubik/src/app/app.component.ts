@@ -18,7 +18,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      var token = "";
+      // var token = "";
       // token = localStorage.getItem("token");
       // if(token == ""){
       this.rootPage = LoginPage;        
