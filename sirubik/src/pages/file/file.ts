@@ -23,7 +23,11 @@ export class FilePage {
     });
   }
 
-  bukaMateri() {
+  bukaMateri(mata_pelajaran, kelas) {
+    // console.log(mata_pelajaran);
+    // console.log(kelas);
+    var pilih = JSON.stringify({mata_pelajaran:mata_pelajaran, kelas:kelas});
+    localStorage.setItem("materi_select", pilih);
     this.navCtrl.push(MateriPage);
   }
 
