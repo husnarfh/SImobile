@@ -26,8 +26,8 @@
     <ion-card>
         
         <div class="clsAutoFit">
-            <!-- <img class="clsImg" src="assets/imgs/logo.png"/> -->
-            <img class="clsImg" [src]="profile.image"/>
+            <img class="clsImg" *ngIf="ada == 0" src="assets/imgs/logo.png"/>
+            <img class="clsImg" *ngIf="ada == 1" [src]="profile.image"/>
         </div>
 
         <ion-card-title text-center>
