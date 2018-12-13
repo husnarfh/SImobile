@@ -19,8 +19,8 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
         var token = localStorage.getItem("token");
-      // this.rootPage = LoginPage;
-        this.rootPage = TabsPage;
+      this.rootPage = LoginPage;
+        // this.rootPage = TabsPage;
 
         // this.rootPage = token
         // ? TabsPage

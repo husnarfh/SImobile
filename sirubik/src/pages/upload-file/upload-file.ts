@@ -26,17 +26,62 @@ export class UploadFilePage {
   uploadMessage: any;
   token: any;
   headers: any;
+  deskripsi: any;
+  kelas: any;
+  mata_pelajaran: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private transfer: FileTransfer,
     public loadingCtrl: LoadingController,
-    public toastCtrl: ToastController, private fileChooser: FileChooser, private filePath: FilePath
+    public toastCtrl: ToastController, private fileChooser: FileChooser, private filePath: FilePath,
+    public http: Http
+    
     ) {
       this.token = localStorage.getItem('token');
     this.headers = new Headers();
     this.headers.append('Authorization', 'Bearer ' + this.token);
+    this.http = http;
   }
 
+  public save(){
+    console.log(this.deskripsi);
+    var link = 'http://localhost:8000/api/materiupload';
 
+    var data = JSON.stringify({
+      kelas: this.kelas,
+      mata_pelajaran: this.mata_pelajaran,
+      deskripsi: this.deskripsi,
+    });
+
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + this.token);
+    let options = new RequestOptions({ headers: headers });
+    this.http.post(link, data, options).subscribe(data => {
+      var response = data.json();
+      if (response.status == "200") {
+        console.log(response.data);
+        var toast = this.toastCtrl.create({
+          message: 'Data sukses tersimpan',
+          duration: 3000,
+          position: 'bottom'
+        });
+        toast.present();
+
+        return;
+        // this.app.getRootNav().pop();
+
+      }
+
+
+    }, error=>{
+      console.log("error");
+
+    });
+
+  
+  }
+
+  // harus di browser
   public uploadFile() {
     //Choose the file using filechoose library
     this.fileChooser.open()
