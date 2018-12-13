@@ -1,10 +1,26 @@
 page-schedule {
-    ion-header.header {
-        background: #faebec;
+     .toolbar-background {
+        background-color: rgb(216, 36, 72);
+     }
+
+    [text-color="white"]{
+        color: white;
     }
 
     .scroll-content {
         overflow-y: auto;  
     }
 
+    .p {
+        font-size: 100px;
+        font-weight: bold;
+    }
+
+    ion-card.card{
+        padding: 15px;
+    }
+
+    ion-content.content {
+        background-color: rgb(240, 237, 228);
+    }
 }

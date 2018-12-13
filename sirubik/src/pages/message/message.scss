@@ -2,4 +2,8 @@ page-message {
     .scroll-content {
         overflow-y: auto;  
     }
+
+    ion-content.content {
+        background-color: rgb(240, 237, 228);
+      }
 }
