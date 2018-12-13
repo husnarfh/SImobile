@@ -19,13 +19,13 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       var token = "";
-      token = localStorage.getItem("token");
-      if(token == ""){
-        this.rootPage = LoginPage;        
-      }
-      else{
-        this.rootPage = TabsPage;
-      }
+      // token = localStorage.getItem("token");
+      // if(token == ""){
+      this.rootPage = LoginPage;        
+      // }
+      // else{
+        // this.rootPage = TabsPage;
+      // }
       // this.rootPage = TabsPage;
 
         // this.rootPage = token

@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "name": "Kelas 1",
+            "name": "1",
             "children": [
                 {
                     "name": "Bahasa Inggris" 
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "name": "Kelas 2",
+            "name": "2",
             "children": [
                 {
                     "name": "Bahasa Inggris"                    
@@ -29,7 +29,7 @@
             ]
         },
         {
-            "name": "Kelas 3",
+            "name": "3",
             "children": [
                 {
                     "name": "Bahasa Inggris"                    
@@ -43,7 +43,7 @@
             ]
         },
         {
-            "name": "Kelas 4",
+            "name": "4",
             "children": [
                 {
                     "name": "Bahasa Inggris"                    
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "name": "Kelas 5",
+            "name": "5",
             "children": [
                 {
                     "name": "Bahasa Inggris"                    
@@ -71,7 +71,7 @@
             ]
         },
         {
-            "name": "Kelas 6",
+            "name": "6",
             "children": [
                 {
                     "name": "Bahasa Inggris"                    
