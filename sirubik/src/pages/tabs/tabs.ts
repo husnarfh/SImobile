@@ -15,8 +15,11 @@ export class TabsPage {
   tab2Root = FilePage;
   tab3Root = MessagePage;
   tab4Root = ProfilePage;
+  profile: any;
 
   constructor() {
-    console.log(localStorage.getItem('userdata'));
+    // console.log(localStorage.getItem('userdata'));
+    this.profile = console.log(localStorage.getItem('profile'));
+    
   }
 }

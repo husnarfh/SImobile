@@ -17,21 +17,22 @@
     <ion-list>
         <ion-item>
             <ion-label stacked>Mata Pelajaran</ion-label>
-            <ion-select interface="popover" [(ngModel)]="matpel">
-              <ion-option value="inggris">Bahasa Inggris</ion-option>
-              <ion-option value="ipa">IPA</ion-option>
-              <ion-option value="matematika">Matematika</ion-option>
+            <ion-select interface="popover" [(ngModel)]="mata_pelajaran">
+              <ion-option value="Bahasa Inggris">Bahasa Inggris</ion-option>
+              <ion-option value="IPA">IPA</ion-option>
+              <ion-option value="IPS">IPA</ion-option>
+              <ion-option value="Matematika">Matematika</ion-option>
             </ion-select>
           </ion-item>
           <ion-item>
               <ion-label stacked>Kelas</ion-label>
-              <ion-select interface="popover" [(ngModel)]="Kelas">
-                <ion-option>Kelas 1</ion-option>
-                <ion-option>Kelas 2</ion-option>
-                <ion-option>Kelas 3</ion-option>
-                <ion-option>Kelas 4</ion-option>
-                <ion-option>Kelas 5</ion-option>
-                <ion-option>Kelas 6</ion-option>
+              <ion-select interface="popover" [(ngModel)]="kelas">
+                <ion-option value="1">Kelas 1</ion-option>
+                <ion-option value="2">Kelas 2</ion-option>
+                <ion-option value="3">Kelas 3</ion-option>
+                <ion-option value="4">Kelas 4</ion-option>
+                <ion-option value="5">Kelas 5</ion-option>
+                <ion-option value="6">Kelas 6</ion-option>
               </ion-select>
             </ion-item>
             <ion-item>
@@ -40,11 +41,11 @@
             </ion-item>
             <ion-item>
                 <ion-label stacked>Deskripsi File</ion-label>
-                <ion-input></ion-input>
+                <ion-input [(ngModel)]="deskripsi"></ion-input>
             </ion-item>
             <br>
             <div>
-            <ion-label stacked> <button ion-button color="dark" outline ion-select interface="action-sheet">Pilih File</button>
+            <ion-label stacked> <button ion-button color="dark" outline ion-select interface="action-sheet" (click)="save()">Pilih File</button>
             </ion-label>
             </div>
       </ion-list>

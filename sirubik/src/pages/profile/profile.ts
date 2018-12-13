@@ -15,15 +15,25 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ProfilePage {
   profile: any;
   token: any;
+  ada: any;
   constructor(
     public navCtrl: NavController, 
     public app: App,
     public http: Http,
     public domSanitizer: DomSanitizer
     ) {
-    
+      
+    this.profile = "";
     this.profile = JSON.parse(localStorage.getItem('profile'));
-    this.profile.image = ("data:image/jpg;base64,"+ this.profile.image);
+    console.log(this.profile.image);
+    if (this.profile.image && this.profile.image != "anonimus.jpg"){
+      this.profile.image = ("data:image/jpg;base64,"+ this.profile.image);
+      this.ada = 1;
+    }
+    else{
+      this.ada = 0;
+    }
+    console.log(this.ada);
     this.token = localStorage.getItem('token');
     this.http = http;
   }
@@ -42,8 +52,8 @@ export class ProfilePage {
       }
     );
     console.log("Log out sukses");
-    // localStorage.setItem("token", "");
     localStorage.clear(); 
+    localStorage.setItem("token", "");
     this.app.getRootNav().setRoot(LoginPage);
 
   }

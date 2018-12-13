@@ -38,7 +38,7 @@ export class MateriPage {
       console.log('download complete: ' + entry.toURL());
       // bikin toast
     }, (error) => {
-      console.log("oops")
+        console.log("oops")
       // bikin toast
     });
   }

@@ -16,8 +16,9 @@ export class SchedulePage {
 
     constructor(public navCtrl: NavController, public app:App
         ,public http:Http) {
-        this.doRefresh;
+        this.profile = "";
         this.profile = JSON.parse(localStorage.getItem('profile'));
+        console.log(this.profile);
         this.token = (localStorage.getItem('token'));
         this.getschedule();
     }

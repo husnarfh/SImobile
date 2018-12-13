@@ -73,10 +73,11 @@ login(){
          //this.data.login(response.data, "user");
         this.data.token = response.data['token'];
         localStorage.setItem('token', response.data['token']);
-          
-        this.loader();
-        this.app.getRootNav().setRoot(TabsPage);
-          // this.navCtrl.setRoot (ProfilPage);
+        this.profile();
+        // this.loader();
+        // this.app.getRootNav().setRoot(TabsPage);
+        
+        // this.navCtrl.setRoot (ProfilPage);
         } else {
           // If account not found
           let toast = this.toastCtrl.create({
