@@ -22,9 +22,11 @@
   <ion-list *ngFor="let item of information; let i = index" no-lines no-padding>
     <!-- Toggle Button -->
     <ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <span color-color="warna"></span>
       <ion-icon item-start name="ios-arrow-dropright" *ngIf="!item.open"></ion-icon>
       <ion-icon item-start name="ios-arrow-dropdown" *ngIf="item.open"></ion-icon>
-      Kelas {{ item.name }}
+      {{ item.name }}
+  
     </ion-item>
 
     <ion-list *ngIf="item.children && item.open" no-lines>

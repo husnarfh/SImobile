@@ -8,6 +8,8 @@ page-profile {
     .clsImg {
         height: 100%;
         width: 100%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
     }
 
     .scroll-content {
@@ -22,4 +24,9 @@ page-profile {
     ion-content.content {
         background-color: rgb(240, 237, 228);
       }
+
+    .color {
+        color: white;
+    }
+
 }
