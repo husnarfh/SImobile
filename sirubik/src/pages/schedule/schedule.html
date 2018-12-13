@@ -16,9 +16,8 @@ x<ion-header>
   
   <h3>Halo, Kak {{ profile.nama_lengkap }}</h3>
   <p>{{today | date}}</p>
-  <br>
-  <ion-card>
-      
+  <!-- <br> -->
+<!--       
       <ion-card-content>
         <ion-row>
           <ion-col>
@@ -35,7 +34,31 @@ x<ion-header>
                 <h3>09:00</h3>
               </ion-col>
             </ion-row>
+      </ion-card-content> -->
+
+      <ion-list *ngFor="let item of schedule; let i = index" no-lines no-padding>
+  <ion-card>      
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <h2>{{item.mata_pelajaran}}, kelas {{item.kelas}}</h2>
+          </ion-col>
+        </ion-row>
+          <ion-row>
+              <ion-col col-9>
+                <ion-note>TANGGAL</ion-note>
+                <!-- <h3>Sabtu, 15 Des 2018</h3> -->
+                <h3>{{item.waktu | date}}</h3>
+
+              </ion-col>
+              <ion-col center text-center>
+                <ion-note>PUKUL</ion-note>
+                <h3>{{item.waktu | date: 'HH:mm'}}</h3>
+              </ion-col>
+            </ion-row>
       </ion-card-content>
-    
   </ion-card>
+  </ion-list>
+
+
 </ion-content>

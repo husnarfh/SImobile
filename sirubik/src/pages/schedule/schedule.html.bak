@@ -1,0 +1,35 @@
+x<ion-header>
+  <ion-navbar>
+    <ion-title> <img src="../../assets/rubik-logo.png" height="40"/>
+  </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  
+  <h3>Halo, Kak {{ profile.nama_lengkap }}</h3>
+  <p>{{today | date}}</p>
+  
+  
+  <ion-list *ngFor="let item of schedule; let i = index" no-lines no-padding>
+    <ion-card>
+      <ion-item>
+        <ion-icon name="calendar" item-start large></ion-icon>
+        <h2>{{item.mata_pelajaran}}</h2>
+        <!-- <p>Hari/tanggal :</p> -->
+        <h2>{{item.waktu}}</h2>
+        <p>{{item.id_jadwal}}</p>
+        <!-- <p>Mata Pelajaran :</p> -->
+      </ion-item>
+    </ion-card>
+  </ion-list>
+  
+
+</ion-content>

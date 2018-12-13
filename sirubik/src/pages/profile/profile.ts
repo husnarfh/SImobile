@@ -42,7 +42,8 @@ export class ProfilePage {
       }
     );
     console.log("Log out sukses");
-    localStorage.setItem("token", null);
+    // localStorage.setItem("token", "");
+    localStorage.clear(); 
     this.app.getRootNav().setRoot(LoginPage);
 
   }

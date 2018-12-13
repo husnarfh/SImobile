@@ -31,6 +31,7 @@
     "@ionic-native/transfer": "^3.14.0",
     "@ionic/pro": "2.0.3",
     "@ionic/storage": "2.2.0",
+    "cordova-android": "7.0.0",
     "cordova-browser": "5.0.4",
     "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-device": "^2.0.2",
