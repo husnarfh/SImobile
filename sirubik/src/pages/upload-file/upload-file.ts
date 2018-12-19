@@ -73,14 +73,9 @@ export class UploadFilePage {
         // this.app.getRootNav().pop();
 
       }
-
-
     }, error=>{
       console.log("error");
-
     });
-
-  
   }
 
   // harus di browser

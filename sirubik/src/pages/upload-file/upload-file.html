@@ -42,13 +42,13 @@
                 <ion-label stacked>Deskripsi File</ion-label>
                 <ion-input [(ngModel)]="deskripsi"></ion-input>
             </ion-item>
-            <br>
-            <div>
-            <ion-label stacked> <button ion-button color="dark" outline ion-select interface="action-sheet" (click)="save()">Simpan File</button>
-            </ion-label>
-            </div>
+        <ion-item>
+            <button ion-button color="dark" outline ion-select interface="action-sheet" (click)="uploadFile()">Select File</button>
+
+        </ion-item>
+
       </ion-list>
-
-        <button ion-button (click)="uploadFile()">Select File</button>
-
+        
+        <ion-label> <button ion-button (click)="save()">Simpan File</button>
+        </ion-label>
 </ion-content>
