@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Upload File</ion-title>
+    <ion-title><span text-color="white">Upload File</span></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -20,7 +20,6 @@
             <ion-select interface="popover" [(ngModel)]="mata_pelajaran">
               <ion-option value="Bahasa Inggris">Bahasa Inggris</ion-option>
               <ion-option value="IPA">IPA</ion-option>
-              <ion-option value="IPS">IPA</ion-option>
               <ion-option value="Matematika">Matematika</ion-option>
             </ion-select>
           </ion-item>
@@ -36,8 +35,8 @@
               </ion-select>
             </ion-item>
             <ion-item>
-              <ion-label stacked>Nama File</ion-label>
-              <ion-input></ion-input>
+              <ion-label stacked>Nama Materi</ion-label>
+              <ion-input [(ngModel)]="nama_materi"></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label stacked>Deskripsi File</ion-label>
@@ -45,7 +44,7 @@
             </ion-item>
             <br>
             <div>
-            <ion-label stacked> <button ion-button color="dark" outline ion-select interface="action-sheet" (click)="save()">Pilih File</button>
+            <ion-label stacked> <button ion-button color="dark" outline ion-select interface="action-sheet" (click)="save()">Simpan File</button>
             </ion-label>
             </div>
       </ion-list>

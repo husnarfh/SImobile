@@ -28,6 +28,7 @@ export class UploadFilePage {
   headers: any;
   deskripsi: any;
   kelas: any;
+  nama_materi: any;
   mata_pelajaran: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -49,6 +50,7 @@ export class UploadFilePage {
 
     var data = JSON.stringify({
       kelas: this.kelas,
+      nama_materi: this.nama_materi,
       mata_pelajaran: this.mata_pelajaran,
       deskripsi: this.deskripsi,
     });

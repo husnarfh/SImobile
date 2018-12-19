@@ -8,6 +8,8 @@ page-profile {
     .clsImg {
         height: 100%;
         width: 100%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
     }
 
     .scroll-content {

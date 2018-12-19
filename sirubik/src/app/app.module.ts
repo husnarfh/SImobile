@@ -17,6 +17,7 @@ import { UploadFilePage } from '../pages/upload-file/upload-file';
 import { ChatPage } from '../pages/chat/chat';
 import { UploadphotoPage } from '../pages/uploadphoto/uploadphoto';
 import { MateriPage } from '../pages/materi/materi';
+import { ListTemanPage } from '../pages/list-teman/list-teman';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -30,6 +31,7 @@ import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { FileChooser } from '@ionic-native/file-chooser';
+import { ProfileTemanPage } from '../pages/profile-teman/profile-teman';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { FileChooser } from '@ionic-native/file-chooser';
     UploadFilePage,
     ChatPage,
     UploadphotoPage,
-    MateriPage
+    MateriPage,
+    ListTemanPage,
+    ProfileTemanPage
   ],
   imports: [
     BrowserModule,
@@ -68,7 +72,9 @@ import { FileChooser } from '@ionic-native/file-chooser';
     UploadFilePage,
     ChatPage,
     UploadphotoPage,
-    MateriPage
+    MateriPage,
+    ListTemanPage,
+    ProfileTemanPage
   ],
   providers: [
     StatusBar,

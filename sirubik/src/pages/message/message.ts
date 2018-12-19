@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 import { ChatPage } from '../chat/chat';
+import { ListTemanPage } from '../list-teman/list-teman';
 
 @Component({
   selector: 'page-message',
@@ -8,7 +9,8 @@ import { ChatPage } from '../chat/chat';
 })
 export class MessagePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+    public app: App ) {
 
   }
 
@@ -16,7 +18,11 @@ openChat(){
   var tok = localStorage.getItem('profile');
   console.log(tok);
   
-  this.navCtrl.push(ChatPage);
+  this.app.getRootNav().push(ChatPage);
+}
+
+listTeman(){
+  this.app.getRootNav().push(ListTemanPage);
 }
 
 }

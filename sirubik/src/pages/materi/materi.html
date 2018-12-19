@@ -7,13 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>subject, kelas</ion-title>
+    <!-- <ion-title>subject, kelas</ion-title> -->
+    <ion-title>{{mata_pelajaran}}, {{kelas}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list *ngFor="let item of hasil_materi; let i = index" no-lines no-padding>
 
     <ion-card>
 
@@ -21,15 +23,14 @@
           <ion-avatar item-start>
             <img src="../../assets/imgs/logo.png">
           </ion-avatar>
-          <h2>Husna Nurarifah</h2>
-          <h3>Materi Phytagoras</h3>
+          <h2>{{item.nama_lengkap}}</h2>
+          <h3>{{item.nama_materi}}</h3>
           <p>5 Nov, 2018</p>
         </ion-item>
       
         <ion-card-content>
-          <p>Membahas tentang konsep dan latihan soal</p>
+          <p>{{item.deskripsi}}</p>
         </ion-card-content>
-      
         <ion-row>
           <ion-col>
             <button ion-button icon-start clear small>
@@ -38,15 +39,17 @@
             </button>
           </ion-col>
           <ion-col>
-            <button ion-button icon-start clear small>
+            <button ion-button icon-start clear smal (click)="download(item.nama_materi)"l>
               <ion-icon name="md-download"></ion-icon>
               <div>Download</div>
-            </button>
+            </button >
           </ion-col>
         </ion-row>
       
       </ion-card>
 
+  </ion-list>
+      <!-- 
       <ion-card>
 
           <ion-item>
@@ -74,6 +77,6 @@
             </ion-col>
           </ion-row>
         
-        </ion-card>
+        </ion-card> -->
 
 </ion-content>

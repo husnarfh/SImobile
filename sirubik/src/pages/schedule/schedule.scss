@@ -11,16 +11,17 @@ page-schedule {
         overflow-y: auto;  
     }
 
-    .p {
-        font-size: 100px;
-        font-weight: bold;
-    }
-
+    
     ion-card.card{
         padding: 15px;
     }
 
     ion-content.content {
         background-color: rgb(240, 237, 228);
+    }
+
+    [text-size="ukuran"]{
+        font-size: 18px;
+        font-weight: bold;
     }
 }

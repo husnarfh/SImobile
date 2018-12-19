@@ -22,9 +22,11 @@
   <ion-list *ngFor="let item of information; let i = index" no-lines no-padding>
     <!-- Toggle Button -->
     <ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <span color-color="warna"></span>
       <ion-icon item-start name="ios-arrow-dropright" *ngIf="!item.open"></ion-icon>
       <ion-icon item-start name="ios-arrow-dropdown" *ngIf="item.open"></ion-icon>
-      {{ item.name }}
+      Kelas {{ item.name }}
+  
     </ion-item>
 
     <ion-list *ngIf="item.children && item.open" no-lines>
@@ -38,7 +40,7 @@
         </ion-item>
 
         <!-- Direct Add Button as Fallback -->
-        <ion-item (click)="bukaMateri()" *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
+        <ion-item (click)="bukaMateri(child.name, item.name)" *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
           <h6>{{ child.name }}</h6>
           <p>{{ child.information }}</p>
         </ion-item>

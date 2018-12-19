@@ -75,7 +75,7 @@ login(){
         localStorage.setItem('token', response.data['token']);
         this.profile();
         // this.loader();
-        // this.app.getRootNav().setRoot(TabsPage);
+        this.app.getRootNav().setRoot(TabsPage);
         
         // this.navCtrl.setRoot (ProfilPage);
         } else {
