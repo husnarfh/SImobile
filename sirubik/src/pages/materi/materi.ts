@@ -18,6 +18,7 @@ import { RequestOptions } from '@angular/http';
   templateUrl: 'materi.html',
 })
 export class MateriPage {
+  // wajib
   token: any;
   data: any;
   materi: any;
@@ -30,8 +31,8 @@ export class MateriPage {
     public http: Http,
     ) {
     this.materi = JSON.parse(localStorage.getItem("materi_select"));
-      this.token = (localStorage.getItem("token"));
-      this.load();
+    this.token = (localStorage.getItem("token"));
+    this.load();
   } 
 
   load(){

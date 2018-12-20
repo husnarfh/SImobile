@@ -13,8 +13,10 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: 'profile.html'
 })
 export class ProfilePage {
+  //  wajib
   profile: any;
   token: any;
+
   ada: any;
   constructor(
     public navCtrl: NavController, 
@@ -24,8 +26,8 @@ export class ProfilePage {
     ) {
       
     this.profile = "";
+    // wajib
     this.profile = JSON.parse(localStorage.getItem('profile'));
-    console.log(this.profile.image);
     if (this.profile.image && this.profile.image != "anonimus.jpg"){
       this.profile.image = ("data:image/jpg;base64,"+ this.profile.image);
       this.ada = 1;
